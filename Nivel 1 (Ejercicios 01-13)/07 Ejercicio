@@ -1,0 +1,12 @@
+VALOR_MITHRIL = 1_000_000
+VALOR_COMARCA = 850_000
+
+print(f"¿El mithril vale más que la Comarca? {VALOR_MITHRIL > VALOR_COMARCA}") # True
+
+print(f"¿El mithril vale menos que la Comarca? {VALOR_MITHRIL < VALOR_COMARCA}") # False
+
+print(f"¿El mithril vale más o lo mismo que la Comarca? {VALOR_MITHRIL >= VALOR_COMARCA}") # True
+
+print(f"¿El mithril vale exactamente lo mismo que la Comarca? {VALOR_MITHRIL == VALOR_COMARCA}") # False
+
+print(f"¿El mithril y la Comarca tienen diferentes precios? {VALOR_MITHRIL != VALOR_COMARCA}") # True
