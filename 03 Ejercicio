@@ -1,0 +1,17 @@
+estatura_gandalf = 1.78
+estatura_gimli = 1.37
+
+diferencia_estatura = estatura_gandalf - estatura_gimli
+
+# Cuantas veces cabe Gimli en Gandalf (ojo)
+division_coqueta = estatura_gimli / estatura_gandalf
+
+promedio_estatura = (estatura_gandalf + estatura_gimli) / 2
+
+# Formula conversión cm a pulgadas: cm / 2.54
+conversion_pulgadas = estatura_gandalf / 2.54
+
+print(f"Diferencia estatura: {diferencia_estatura:.2f}cm") # Diferencia estatura: 0.41cm
+print(f"Gimli cabe {division_coqueta:.2f}cm en Gandalf") # Gimli cabe 0.77cm en Gandalf
+print(f"Promedio estatura: {promedio_estatura:.2f}cm") # Promedio estatura: 1.58cm
+print(f"Conversión de estatura Gandalf a pulgadas: {conversion_pulgadas:.2f}") # Conversión de estatura Gandalf a pulgadas: 0.70

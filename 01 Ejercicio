@@ -1,0 +1,12 @@
+nombre = "Frodo Bolsón"
+edad = 33
+estatura_cm = 106.7
+es_portador_del_anillo = True
+raza = "Hobbit"
+
+print("=== FICHA DE PERSONAJE ===")
+print(f"Nombre: {nombre}") # Nombre: Frodo Bolsón
+print(f"Raza: {raza}") # Raza: Hobbit
+print(f"Edad: {edad} años") # Edad: 33 años
+print(f"Estatura: {estatura_cm} cm") # Estatura: 106.7 cm
+print(f"Portador del anillo: {es_portador_del_anillo}") # Portador del anillo: True

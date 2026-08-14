@@ -1,0 +1,18 @@
+ANILLOS_ELFOS = 3
+ANILLOS_ENANOS = 7
+ANILLOS_HOMBRES = 9
+ANILLO_UNICO = 1
+
+anillos_totales = ANILLOS_ELFOS + ANILLOS_ENANOS + ANILLOS_HOMBRES + ANILLO_UNICO
+
+porcentaje_elfos = (ANILLOS_ELFOS / anillos_totales) * 100
+porcentaje_enanos = (ANILLOS_ENANOS / anillos_totales) * 100
+porcentaje_hombres = (ANILLOS_HOMBRES / anillos_totales) * 100
+porcentaje_unico = (ANILLO_UNICO / anillos_totales) * 100
+
+print(f"Anillos en total: {anillos_totales}") # Anillos en total: 20
+print("---")
+print(f"Porcentaje anillos elfos: {porcentaje_elfos:.2f}%") # Porcentaje anillos elfos: 15.00%
+print(f"Porcentaje anillos enanos: {porcentaje_enanos:.2f}%") # Porcentaje anillos enanos: 35.00%
+print(f"Porcentaje anillos hombres: {porcentaje_hombres:.2f}%") # Porcentaje anillos hombres: 45.00%
+print(f"Porcentaje anillo unico: {porcentaje_unico:.2f}%") # Porcentaje anillo unico: 5.00%
