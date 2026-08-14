@@ -1,0 +1,26 @@
+peso_anillo = 0.03
+
+# El ejercicio pide que calculemos en peso "percibido", no estoy seguro a que se refiere esto.
+# Dado a esto, tomare la linea "se siente como si pesara mil veces más" de forma literal, y calculare el peso percibido como 1000 veces el peso real del anillo.
+
+peso_percibido = peso_anillo * 1000
+
+# De la misma manera, supondre que los 0.5kg diarios acumulados son usando el peso percibido como base.
+
+fatiga_180 = 0.5 * 180 # = 90kg
+fatiga_frodo = peso_percibido + fatiga_180 # = 120kg
+
+print(f"Peso percibido del anillo: {peso_percibido}kg") # Peso percibido del anillo: 30kg
+print(f"Fatiga total de Frodo: {fatiga_frodo}kg") # Fatiga total de Frodo: 120kg
+
+# La siguiente parte pide usar operador de potencia ** para calcular 2 ** 10. Por lo que tengo entendido, esto es aparte de las dos funciones anteriores.
+
+potencia_de_dos = 2 ** 10
+print(f"2 ** 10 = {potencia_de_dos}") # 2 ** 10 = 1024
+
+# Por lo que tengo entendido según mi investigación, 1024 es un numero especial dado a como funcionan los computadores.
+# Como los computadores funcionan en un sistema binario. Cada byte tiene dos estados (0 y 1, "encendido y apagado").
+# En la vida medimos todo por 10. Tomemos metros por ejemplo: 100cm = 1m. Ingenieros necesitaban un numero cerca de 1000 para medir data. 
+# 1024 es el numero más cercano a 1000 que es potencia de 2. Por lo que se volvió un estandar para medir data en computadores.
+# Era necesario que el numero seleccionado sea potencia de 2, por como mencione anteriormente: las computadores funcionan en un sistema binario (base-2!)
+# Gracias a esto, 1KB = 1024 bytes, 1MB = 1024 KB, 1GB = 1024 MB, etc.
