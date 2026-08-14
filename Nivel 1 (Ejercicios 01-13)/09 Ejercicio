@@ -1,0 +1,7 @@
+anillo_puesto = False
+distancia_mordor_km = 120
+
+if anillo_puesto == True and distancia_mordor_km < 100:
+    print("SAURON TE HA VISTO")
+else:
+    print("Estás a salvo... Por ahora.")
