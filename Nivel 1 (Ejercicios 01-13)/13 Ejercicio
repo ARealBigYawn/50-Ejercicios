@@ -1,0 +1,5 @@
+voluntad_fuerte = True
+sangre_real = True
+
+if voluntad_fuerte ^ sangre_real:
+    
