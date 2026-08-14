@@ -1,0 +1,16 @@
+leguas = int(input("Ingrese una distancia en leguas: "))
+
+distancia_km = leguas * 4.828
+distancia_metros = distancia_km * 1000
+
+dias_hobbit = distancia_km / 30
+dias_caballo = distancia_km / 90
+
+print(f"Distancia en leguas: {leguas}")
+print(f"Distancia en kilómetros: {distancia_km}km")
+print(f"Distancia en metros: {distancia_metros}m")
+print(f"Dias que tardaría un hobbit caminando: {dias_hobbit:.2f}")
+print(f"Dias que tardaría un caballo: {dias_caballo:.2f}")
+
+if dias_hobbit > 30:
+    print("Necesitarás las Águilas.")
