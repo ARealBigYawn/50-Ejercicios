@@ -1,0 +1,11 @@
+nombre = input("Ingrese nombre: ")
+edad = int(input("Ingrese edad: "))
+
+if edad < 33:
+    print("Eres demasiado joven, la mayoria de edad hobbit es 33.")
+elif 33 <= edad <= 100:
+    print("Puedes unirte a la Compañia")
+elif 101 <= edad <= 500:
+    print("Eres sabio, serás consejero.")
+elif edad > 500:
+    print("Eres un Maia o un Elfo. Lidera el Concilio.")
