@@ -1,0 +1,10 @@
+temperatura = int(input("Temperatura: "))
+
+if temperatura > 15:
+    print("Clima agradable, la Compañia avanza rápido.")
+elif 0 <= temperatura <= 15:
+    print("Hace frío, abriguen a los hobbits.")
+elif -20 <= temperatura < 0:
+    print("Ventisca. Saruman está atacando la montaña.")
+else:
+    print("Imposible cruzar. Vayan por las Minas de Moria.")
