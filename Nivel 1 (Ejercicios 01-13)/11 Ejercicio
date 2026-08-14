@@ -1,0 +1,15 @@
+cobro_orco = 35000
+
+cantidad_orcos = int(input("Cantidad de orcos derrotados: "))
+
+if cantidad_orcos < 49:
+    pago_total = cantidad_orcos * cobro_orco
+    print(f"El pago total es: {pago_total}")
+elif cantidad_orcos >= 50:
+    pago_total = cantidad_orcos * cobro_orco
+    pago_total_con_bono = pago_total * (1 + 20 / 100)
+    print(f"El pago total es: {pago_total_con_bono} (Incluye bono del 20% por superar los 50 orcos)")
+elif cantidad_orcos >= 100:
+    pago_total = cantidad_orcos * cobro_orco
+    pago_total_con_bono = pago_total * (1 + 35 / 100)
+    print(f"El pago total es: {pago_total_con_bono} (Incluye bono del 35% por superar los 100 orcos)")
