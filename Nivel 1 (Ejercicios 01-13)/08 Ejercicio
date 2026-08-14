@@ -1,0 +1,25 @@
+# No estaba seguro si el punto era hacerlo con input(). Espero que sí. Si no, oops.
+
+nombre = input("Nombre: ")
+edad = int(input("Edad: "))
+aptitud_arma= input("Sabe usar un arma? (si/no): ").lower() == "si"
+aptitud_magia = input("Sabe usar magia? (si/no): ").lower() == "si"
+raza = input("¿Es un orco? (si/no): ").lower() == "si"
+
+mayor_de_edad = edad >= 18
+aptitud_combate = aptitud_arma or aptitud_magia
+no_es_orco = not raza
+
+admision_concilio = mayor_de_edad and aptitud_combate and no_es_orco
+
+print("-------------------------------")
+print(f"Nombre: {nombre}")
+print(f"Es mayor de edad: {mayor_de_edad}")
+print(f"Tiene aptitud de combate: {aptitud_combate}")
+print(f"No es orco: {no_es_orco}")
+print("-------------------------------")
+
+if admision_concilio:
+    print(f"{nombre} es aceptado dentro del Concilio")
+else:
+    print(f"{nombre} no es aceptado dentro del Concilio. :(")
