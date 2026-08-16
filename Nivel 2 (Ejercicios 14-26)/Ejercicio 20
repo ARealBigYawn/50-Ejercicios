@@ -1,0 +1,43 @@
+tropas = [120, 340, 87, 500, 210, 65, 430]
+total = 0
+mayor_tropas = 0
+menor_tropas = tropas[0]
+
+# Sin usar sum() , max() ni min() (hazlo con ciclos), calcula e imprime:
+# Total de soldados
+# La aldea con más tropas (valor e índice)
+# La aldea con menos tropas
+# El promedio de tropas por aldea
+
+# Con esta función, sumamos todos los numeros encontrados dentro de la lista, dandonos el total.
+
+for num in tropas:
+    total += num
+
+print(f"Total de soldados: {total}")
+
+# Se esta comparando la variable mayor_tropas (que es 0 ahora mismo) con cada numero dentro de la lista. Si el numero es mayor, este reemplaza la variable.
+# Se repite este proceso con cad numero dentro de la lista hasta el final. De esta forma, encuentra el numero mayor (500)
+
+for num in tropas:
+    if num > mayor_tropas:
+        mayor_tropas = num
+
+print(f"La aldea con más tropas: {mayor_tropas}")
+
+# Acá es casi lo mismo que lo anterior, solo que en reversa para sacar el numero menor.
+# Dado a que si usamos menor_tropas = 0, el proceso nunca encontrara un numero menor a 0. Dado a esto, usamos tropas[0].
+# Esto hace que la variable menor_tropas sea la misma que el primer elemento de la lista. Entonces, el proceso empieza a comparar este con el segundo, siendo reemplazado si es menor.
+# Si no lo es, continua con el siguiente hasta llegar al final de la lista.
+
+for num in tropas:
+    if num < menor_tropas:
+        menor_tropas = num
+
+print(f"La aldea con menos tropas: {menor_tropas}")
+
+# Usando el total que ya sacamos, podemos dividirlo por la cantida de elementos dentro de la lista para sacar el promedio de tropas por aldea.
+
+promedio = total / len(tropas)
+
+print(f"Promedio de tropas por aldea: {promedio:.2f}")
