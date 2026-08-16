@@ -1,0 +1,39 @@
+# Dejamos la lista de inventario vacia, ya que la rellenaremos con .append.
+
+inventario = []
+
+inventario.append("Dardo")
+inventario.append("Cota de mithril")
+inventario.append("Anillo unico")
+inventario.append("Pipa")
+inventario.append("Mapa")
+
+# Con el append aplicado, ahora la lista esta rellena.
+
+print("Inventario completo:")
+print(inventario)
+
+# Ahora, eliminaremos un elemento de la lista con .remove
+
+inventario.remove("Anillo unico")
+
+print("Inventario después de eliminar el Anillo Único:")
+print(inventario)
+
+# Ahora insertaremos un elemento en la posicion 0 con .insert
+
+inventario.insert(0, "Libro rojo")
+
+# Con "in", podemos verificar si un elemento esta en la listo. Si esta, deberia de imprimir True.
+
+print("Inventario despues de añadir el libro rojo (en posicion 0):")
+print(inventario)
+
+print("Verificación de dardo")
+print("Dardo" in inventario)
+
+# Con sort, podemos ordenar la lista alfabeticamente.
+
+inventario.sort()
+print("Inventario ordenado:")
+print(inventario)
