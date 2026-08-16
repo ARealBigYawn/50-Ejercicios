@@ -1,0 +1,12 @@
+# Definimos la función registrar batalla con los dos parametros pedidos.
+
+def registrar_batalla(nombre, orcos_derrotados):
+    print(f"{nombre} derrotó a {orcos_derrotados} orcos.")
+
+# Usamos la funcion 5 veces, con nombres diferentes y cantidad de orcos diferentes para comprobar que todo funcione.
+
+registrar_batalla("Aragorn", 87)
+registrar_batalla("Legolas", 90)
+registrar_batalla("Gimli", 80)
+registrar_batalla("Juan", 100)
+registrar_batalla("Pedro", 50)
