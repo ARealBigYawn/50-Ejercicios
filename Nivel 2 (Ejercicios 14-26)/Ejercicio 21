@@ -1,0 +1,20 @@
+personajes = [("Legolas", True), ("Saruman", False), ("Éowyn", True), ("Grima", False)]
+
+# Esta función filtra los personajes. Si un elemento es True, se hace append a la lista aliados creada dentro de la función.
+# Si no es true, significa que es False, por lo tanto se hace append a la lista enemigos.
+
+def filtrar_aliados(personajes):
+    aliados = []
+    enemigos = []
+    for personaje in personajes:
+        if personaje[1]:
+            aliados.append(personaje[0]) 
+        else:
+            enemigos.append(personaje[0])
+    return aliados, enemigos
+
+# Llamamos a la función y guardamos el resultado en las variables aliados y enemigos.
+
+aliados, enemigos = filtrar_aliados(personajes)
+print("Aliados:", aliados) 
+print("Enemigos:", enemigos)
