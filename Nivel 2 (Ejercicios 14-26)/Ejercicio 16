@@ -1,0 +1,14 @@
+# Creamos la función que contiene la formula de daño. El if es para filtrar casos en que el daño sea 0 o negativo. 
+# En el caso de que el daño sea mayor que 1, ignorara el if y dara el numero de daño normal.
+
+def calcular_daño(ataque, defensa):
+    daño = (ataque * 2) - defensa
+    if daño < 0:
+        return 0
+    return daño
+
+print(calcular_daño(50, 30))  # Resultado esperado: 70
+print(calcular_daño(20, 25))  # Resultado esperado: 15
+print(calcular_daño(50, 150))  # Resultado esperado: 0
+print(calcular_daño(10, 5))  # Resultado esperado: 15
+print(calcular_daño(5, 20))  # Resultado esperado: 0
