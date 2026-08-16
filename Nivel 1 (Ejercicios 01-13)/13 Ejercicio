@@ -1,5 +1,13 @@
-voluntad_fuerte = True
-sangre_real = True
 
-if voluntad_fuerte ^ sangre_real:
-    
+
+respuestas = [(True, True), (True, False), (False, True), (False, False)]
+
+for voluntad, sangre in respuestas:
+    if voluntad and sangre:
+        resultado = "Dominas el Palantír por completo."
+    elif not voluntad and not sangre:
+        resultado = "Sauron te corrompe."
+    elif voluntad ^ sangre:
+        resultado = "El Palantír funciona."
+
+    print(f"Voluntad={voluntad}, Sangre={sangre} -> {resultado}")

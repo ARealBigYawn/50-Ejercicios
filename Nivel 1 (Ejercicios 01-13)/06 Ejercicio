@@ -1,6 +1,8 @@
 nombre = input("Ingrese nombre: ")
 edad = int(input("Ingrese edad: "))
 
+# Usando if, podemos colocar diferente condicionales que determinaran que mensaje se imprimira, dependiendo de la edad introducida.
+
 if edad < 33:
     print("Eres demasiado joven, la mayoria de edad hobbit es 33.")
 elif 33 <= edad <= 100:

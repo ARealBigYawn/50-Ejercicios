@@ -1,9 +1,13 @@
+# Colocamos la cantidad de anillos en variables. A partir de esto, calculamos lo pedido por el ejercicio.
+
 ANILLOS_ELFOS = 3
 ANILLOS_ENANOS = 7
 ANILLOS_HOMBRES = 9
 ANILLO_UNICO = 1
 
 anillos_totales = ANILLOS_ELFOS + ANILLOS_ENANOS + ANILLOS_HOMBRES + ANILLO_UNICO
+
+# Para calcular el porcentaje, dividimos la cantidad de anillos de la raza entre el total de anillos y multiplicamos por 100.
 
 porcentaje_elfos = (ANILLOS_ELFOS / anillos_totales) * 100
 porcentaje_enanos = (ANILLOS_ENANOS / anillos_totales) * 100

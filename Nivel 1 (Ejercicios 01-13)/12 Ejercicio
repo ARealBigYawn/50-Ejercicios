@@ -1,7 +1,11 @@
 leguas = int(input("Ingrese una distancia en leguas: "))
 
+# Convertimos leguas a kilómetros y metros. 1 legua = 4.828 km
+
 distancia_km = leguas * 4.828
 distancia_metros = distancia_km * 1000
+
+# Calculamos los días que tardaría un hobbit y un caballo en recorrer la distancia.
 
 dias_hobbit = distancia_km / 30
 dias_caballo = distancia_km / 90

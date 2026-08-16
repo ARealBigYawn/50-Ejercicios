@@ -2,6 +2,12 @@ cobro_orco = 35000
 
 cantidad_orcos = int(input("Cantidad de orcos derrotados: "))
 
+# Dependiendo de la cantidad de orcos ingresados, tres cosas pueden pasar:
+# Si la cantidad es menor a 49, simplemente se hace un cobro. Se multiplica la cantidad de orcos por el cobro por orco.
+# Si la cantidad es mayor o igual a 50, se hace el cobro y se le suma un bono del 20% al total. 
+# Para esto, una vez saca la cantidad normal sin el bono, tomamos el total y lo multiplicamos por el bono (1 + 20 / 100).
+# Para 100 y más, es lo mismo, pero en vez de 20% es un bono de 35%. Se multiplica el total por (1 + 35 / 100).
+
 if cantidad_orcos < 49:
     pago_total = cantidad_orcos * cobro_orco
     print(f"El pago total es: {pago_total}")

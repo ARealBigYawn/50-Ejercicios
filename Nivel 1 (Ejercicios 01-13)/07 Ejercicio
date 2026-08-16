@@ -1,6 +1,8 @@
 VALOR_MITHRIL = 1_000_000
 VALOR_COMARCA = 850_000
 
+# Ya con las variables definidas, simplemente comparamos los valores con diferentes operadores.
+
 print(f"¿El mithril vale más que la Comarca? {VALOR_MITHRIL > VALOR_COMARCA}") # True
 
 print(f"¿El mithril vale menos que la Comarca? {VALOR_MITHRIL < VALOR_COMARCA}") # False

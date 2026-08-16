@@ -1,3 +1,6 @@
+# Simplemenete colocamos los datos del personaje en variables, y luego lo inprimimos. Comentado esta el resultado esperado de cada print.
+# Intentare colocar el resultado esperado de cada print comentado al lado de cada uno por cada ejercicio.
+
 nombre = "Frodo Bolsón"
 edad = 33
 estatura_cm = 106.7

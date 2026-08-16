@@ -1,3 +1,5 @@
+# Con la variable del precio de la comida, calculamos los gastos diaros multiplicando los dias y semanas necesarias.
+
 precio_comida = 1250
 
 gasto_diario = precio_comida * 7
@@ -13,5 +15,7 @@ monedas_hobbit = 500000
 calculo_dias = monedas_hobbit // gasto_diario
 print(f"Con 500,000 monedas, el hobbit puede comer durante {calculo_dias} días") # Con 500,000 monedas, el hobbit puede comer durante 57 días
 
+
+# Con el operador % podemos calcular las monedas que sobraran al dividir.
 monedas_restantes = monedas_hobbit % gasto_diario
 print(f"Al hobbit le sobran {monedas_restantes} monedas") # Al hobbit le sobran 1250 monedas

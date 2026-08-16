@@ -1,3 +1,5 @@
+# Este ejercicio fue sin input(), por lo tanto uno tiene que cambiar la variable dentro del codigo.
+
 anillo_puesto = False
 distancia_mordor_km = 120
 

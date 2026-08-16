@@ -1,4 +1,6 @@
-temperatura = int(input("Temperatura: "))
+temperatura = int(input("Temperatura (en celsius): "))
+
+# Dependiendo de la tempertura ingresada, se imprimira un mensaje diferente. El else funcionara para cualquier temperatura menor a -20, como ya hemos cubierto los demas casos.
 
 if temperatura > 15:
     print("Clima agradable, la Compañia avanza rápido.")

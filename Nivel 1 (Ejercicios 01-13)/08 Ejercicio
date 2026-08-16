@@ -1,4 +1,7 @@
 # No estaba seguro si el punto era hacerlo con input(). Espero que sí. Si no, oops.
+# Acá todo es igual que lo visto anterior, excepto por la variable de aptitudes. Acá, pedimos especificamente el input si o no. 
+# El .lower() es para que no importe si el usuario utilize mayusculas o no. y el == "si" es para que devuelva True si es que el usuario ingreso "si".
+# Si el usuario ingresa "no", la variable sera False.
 
 nombre = input("Nombre: ")
 edad = int(input("Edad: "))
@@ -9,6 +12,9 @@ raza = input("¿Es un orco? (si/no): ").lower() == "si"
 mayor_de_edad = edad >= 18
 aptitud_combate = aptitud_arma or aptitud_magia
 no_es_orco = not raza
+
+# La variable admision_concilio es True solo estas 3 condiciones son True, segun lo ingresado por el usuario.
+# A partir de esto, imprimimos la ficha con los datos ingresado por el usuario solo para confirmar los datos. El ultimo print dependera del estado de admision_concilio.
 
 admision_concilio = mayor_de_edad and aptitud_combate and no_es_orco
 
