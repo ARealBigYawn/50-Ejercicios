@@ -1,0 +1,12 @@
+# Al igual que el anterior, dejamos escalones en 0, ya que este ira cambiando por cada ciclo en que Frodo suba.
+# Usamos % 5 para basicamente calcular si el numero actual es un multiplo de 5. Si lo es, sabemos que han pasado 5 escalones, por lo cual toca imprimer el mensaje de descanso.
+# Una vez que llegamos al escalon 20, el while termina y se imprime el mensaje de llegada.
+
+escalones = 0
+
+while escalones < 20:
+    escalones += 1
+    if escalones % 5 == 0:
+        print(f"Frodo descansa en el escalon {escalones}.")
+
+print("Has llegado a la cima.")
