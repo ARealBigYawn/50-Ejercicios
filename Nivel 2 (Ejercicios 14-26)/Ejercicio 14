@@ -1,0 +1,17 @@
+# Primero creamos la lista.
+
+miembros_compañia = ["Frodo Bolsón", "Sam", "Merry", "Pippin", "Gandalf", "Aragorn", "Legolas", "Gimli", "Boromir"]
+
+# Imprimimos lo pedido por la guia.
+
+print("=== MIEMBROS DE LA COMPAÑÍA ===")
+print(miembros_compañia)
+
+print(f"Cantidad de miembros: {len(miembros_compañia)}")
+
+print(f"Primero: {miembros_compañia[0]}")
+print(f"Ultimo: {miembros_compañia[-1]}")
+
+print(f"Los 4 Hobbits son: {miembros_compañia[0:4]}")
+
+print(f"La lista en orden reverso: {miembros_compañia[::-1]}")
