@@ -1,0 +1,17 @@
+n = int(input("Altura de la piramide: "))
+
+# El ciclo de range(espacio) se ocupa de imprimir espacios. Con esto, damos forma a la piramide.
+# El ciclo range(asterisco), como el nombre dice, imprime los asteriscos. Como asterisco = 2*i-1, solo habran asteriscos en numeros impares, para dar la forma de piramide.
+# Tuve que añadir u end="" para lograr que tome la forma de piramide. Sin el end, el print hace un salto de linea por cada *.
+
+for i in range (1, n + 1):
+    espacio = n - i
+    asterisco = 2 * i - 1
+
+    for a in range(espacio):
+        print(" ", end="")
+
+    for b in range(asterisco):
+        print("*", end="")
+
+    print()
