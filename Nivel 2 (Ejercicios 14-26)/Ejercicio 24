@@ -1,3 +1,7 @@
+# No hay mucho que decir sobre este ejercicio. Dentro de los if esta cada opción que llevara al usuario dependiendo de su input.
+# Usamos append y remove para agregar o eliminar cosas dentro de la lista.
+# Usamos un break para terminar el programa con la opción 4.
+
 personajes = ["Frodo", "Sam", "Gandalf", "Gollum", "Legolas"]
 
 while True:

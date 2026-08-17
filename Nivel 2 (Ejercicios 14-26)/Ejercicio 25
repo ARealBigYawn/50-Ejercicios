@@ -1,0 +1,4 @@
+personajes = ["Frodo", "Sam", "Gandalf", "Gollum", "Legolas", "Gimli", "Sauron"]
+
+def buscar_personaje(lista, nombre):
+    
