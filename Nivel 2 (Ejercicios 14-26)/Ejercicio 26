@@ -1,1 +1,40 @@
-# WIP
+# Si resta 0 despues de dividir por 2, entonces es par.
+
+def es_par(n):
+    return n % 2 == 0
+
+# Multiplicamos la variable resultado por cada numero desde 1 hasta lo ingresado.
+
+def factorial(n):
+    resultado = 1
+    for i in range(1, n + 1):
+        resultado *= i
+    return resultado
+
+# El primer if descarta numeros menores a 2. (Asi, dejamos los negativos afuera. Empezamos de 2 como este es el primer numero primo)
+# Si esto se cumple, continua y divide el numero para determinar si es primo o no.
+
+def es_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, n):
+        if n % 1 == 0:
+            return False
+    return True
+
+# En cada vuelta se agrega 'a' a la lista. Ya con esto guardado, se actualizan las variables. El proceso se repite hasta que tengamos los 10 primeros numeros de la secuencia.
+
+def fibonacci(n):
+    lista = []
+    a, b = 0, 1
+    for i in range(n):
+        lista.append(a)
+        a, b = b, a + b
+    return lista
+
+n = 10
+
+print(f"¿Es {n} par? {es_par(n)}")
+print(f"El factorial de {n} es: {factorial(n)}")
+print(f"¿Es {n} primo? {es_primo(n)}")
+print(f"Los primeros 10 numeros de la secuencia Fibonacci son: {fibonacci(n)}")
