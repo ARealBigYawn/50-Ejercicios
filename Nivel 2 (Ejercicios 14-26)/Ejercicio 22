@@ -1,0 +1,32 @@
+# Esta funcion busca las vocales en un texto. La variable vocales contiene todas las vocales en mayusculas y minusculas.
+# Gracias a esto, podemos decirle a la función que si una letra es igual que alguna de las vocales especificadas, entonces es una vocal y sumamos 1 al contador.
+
+def contar_vocales(texto):
+    vocales = "aeiouAEIOU"
+    total = 0
+    
+    for letra in texto:
+        if letra in vocales:
+            total += 1
+            
+    return total
+
+# Para la función para contar cuanta de cada vocal hay, es importante no olvidar el .lower
+# Sin esto, el contador no va a tomar en cuenta las mayuscula. Con texto.lower, convertimos cada letra ingresada en minuscula.
+
+def cada_vocal(texto):
+
+    contador = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+
+    for letra in texto.lower():
+        if letra in contador:
+            contador[letra] += 1
+    return contador
+
+frase = "Un anillo para gobernarlos a todos"
+
+print(f"Total de vocales: {contar_vocales(frase)}")
+
+contador = cada_vocal(frase)
+for vocal, cantidad in contador.items():
+    print(f"Cantidad de '{vocal}': {cantidad}")
