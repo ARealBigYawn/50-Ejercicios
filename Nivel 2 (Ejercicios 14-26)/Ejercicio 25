@@ -1,4 +1,10 @@
+# EN PROGRESO!!! NO OLVIDAR TERMINAR ANTES DE ENTREGAR!!!
+
 personajes = ["Frodo", "Sam", "Gandalf", "Gollum", "Legolas", "Gimli", "Sauron"]
 
 def buscar_personaje(lista, nombre):
-    
+    for indice in range(len(lista)):
+        if lista[indice] == nombre:
+            return indice
+    return -1
+
