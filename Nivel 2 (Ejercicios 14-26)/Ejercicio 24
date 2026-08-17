@@ -1,0 +1,35 @@
+personajes = ["Frodo", "Sam", "Gandalf", "Gollum", "Legolas"]
+
+while True:
+    print("1. Ver personajes")
+    print("2. Agregar personajes")
+    print("3. Eliminar personajes")
+    print("4. Salir")
+
+    seleccion = input("Selecciona una opción. (1-4)")
+
+    if seleccion == "1":
+        print(f"Personajes: {personajes}")
+
+    elif seleccion == "2":
+        agregar_personaje = input("Ingrese el nombre del personaje que quiere agregar: ")
+        personajes.append(agregar_personaje)
+        print(f"{agregar_personaje} ha sido agregado a la lista de personajes.")
+
+    elif seleccion == "3":
+        print("Seleccione uno de los siguientes personajes para eliminar.")
+        print(personajes)
+        eliminar_personaje = input()
+
+        if eliminar_personaje in personajes:
+            personajes.remove(eliminar_personaje)
+            print(f"{eliminar_personaje} fue eliminado de la lista.")
+        else:
+            print(f"{eliminar_personaje} no se encuentra en la lista.")
+
+    elif seleccion == "4":
+        print("Finalizando programa.")
+        break
+
+    else:
+        print("Opcion invalida.")
