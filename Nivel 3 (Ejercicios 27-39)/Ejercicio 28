@@ -1,0 +1,37 @@
+class Personaje:
+    def __init__(self, nombre, raza, edad, vida):
+        self.nombre = nombre
+        self.raza = raza
+        self.edad = edad
+        self.vida = vida
+
+
+    def validar_edad(self):
+        if self.edad < 0:
+            self.edad = 0
+
+# Verifica el nombre. Si el campo string de nombre esta vacío, se asigna "Desconocido" dentro de este campo.
+
+    def validar_nombre(self):
+        if not self.nombre:
+            self.nombre = "Desconocido"
+
+    def limitar_vida(self):
+        if self.vida > 100:
+            self.vida = 100
+
+    def __str__(self):
+        return f"Nombre: {self.nombre}, Raza: {self.raza}, Edad: {self.edad}, Vida: {self.vida}"
+
+frodo = Personaje("", "Hobbit", -10, 300)
+frodo.validar_edad()
+frodo.validar_nombre()
+frodo.limitar_vida()
+
+legolas = Personaje("Legolas", "Elfo", 2931, 80)
+legolas.validar_edad()
+legolas.validar_nombre()
+legolas.limitar_vida()
+
+print(frodo)
+print(legolas)
