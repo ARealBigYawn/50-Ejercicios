@@ -8,10 +8,35 @@ class Personaje:
     def presentarse(self):
         print(f"Soy {self.nombre}, un {self.raza} de {self.edad} años")
 
+# Si la vida es menor a 0, el if hara que la vida vuelva a 0. Asi es imposible tener vida negativa.
+
     def recibir_daño(self, cantidad):
-        
+        self.vida -= cantidad
+        if self.vida < 0:
+            self.vida = 0
+
+# if vida es mayor que 0, True. Por lo tanto, personaje esta con vida.
+
+    def con_vida(self):
+        return self.vida > 0
 
 
 frodo = Personaje("Frodo", "Hobbit", 53, 50)
+legolas = Personaje("Legolas", "Elfo", 2931, 100)
+juan = Personaje("Juan", "Humano", 30, 80)
 
 frodo.presentarse()
+legolas.presentarse()
+juan.presentarse()
+
+frodo.recibir_daño(30)
+print(f"{frodo.nombre} tiene {frodo.vida} puntos de vida.")
+print(f"¿{frodo.nombre} está con vida? {frodo.con_vida()}")
+
+legolas.recibir_daño(50)
+print(f"{legolas.nombre} tiene {legolas.vida} puntos de vida.")
+print(f"¿{legolas.nombre} está con vida? {legolas.con_vida()}")
+
+juan.recibir_daño(90)
+print(f"{juan.nombre} tiene {juan.vida} puntos de vida.")
+print(f"¿{juan.nombre} está con vida? {juan.con_vida()}")
