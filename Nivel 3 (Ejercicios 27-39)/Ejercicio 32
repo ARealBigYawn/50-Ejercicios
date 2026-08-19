@@ -1,0 +1,38 @@
+class Personaje:
+    def __init__(self, nombre, raza):
+        self.nombre = nombre
+        self.raza = raza
+    def __str__(self):
+        return f"{self.nombre} ({self.raza})"
+
+class Hobbit(Personaje):
+    def __init__(self, nombre):
+        super().__init__(nombre, raza="Hobbit")
+
+    def presentarse(self):
+        print(f"Soy {self.nombre} y me gustan las fiestas y el buen tabaco.")
+
+class Elfo(Personaje):
+    def __init__(self, nombre):
+        super().__init__(nombre, raza="Elfo")
+
+    def presentarse(self):
+        print(f"Soy {self.nombre}, y mi vista alcanza mas alla del horizonte.")
+
+class Enano(Personaje):
+    def __init__(self, nombre):
+        super().__init__(nombre, raza="Enano")
+
+    def presentarse(self):
+        print(f"Soy {self.nombre}, hijo de Glóin! Y no me llames pequeño.")
+
+
+if __name__ == "__main__":
+    frodo = Hobbit("Frodo")
+    legolas = Elfo("Legolas")
+    gimli = Enano("Gimli")
+
+    personajes = [frodo, legolas, gimli]
+
+    for personaje in personajes:
+        personaje.presentarse()
