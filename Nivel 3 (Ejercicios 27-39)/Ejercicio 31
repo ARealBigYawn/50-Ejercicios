@@ -1,0 +1,39 @@
+class Personaje:
+    def __init__(self, nombre, clase):
+        self.nombre = nombre
+        self.clase = clase
+    def __str__(self):
+        return f"{self.nombre} ({self.clase})"
+
+class Mago(Personaje):
+    def __init__(self, nombre, mana, color):
+        super().__init__(nombre, clase="Mago")
+        self.mana = mana
+        self.color = color
+
+    def lanzar_hechizo(self, nombre_hechizo, costo):
+        if self.mana >= costo:
+            self.mana -= costo
+            print(f"{self.nombre} castea {nombre_hechizo}. Mana restante: {self.mana}.")
+        else:
+            print(f"{self.nombre} FALLA castear {nombre_hechizo}. Mana insuficiente.")
+
+    def ascender(self):
+        if self.color == "gris":
+            self.color = "blanco"
+            self.mana = 200
+            print(f"El hechizero {self.nombre} ha ascendido a un mago {self.color}. Mana aumentado a {self.mana}.") 
+        else:
+            print(f"{self.nombre} es un mago {self.color}.")
+
+if __name__ == "__main__":
+    gandalf = Mago("Gandalf", color="gris", mana=100)
+    print(gandalf)
+
+    gandalf.lanzar_hechizo("Bola de fuego", 60)
+    gandalf.lanzar_hechizo("Escudo mágico", 60) 
+
+    gandalf.ascender()
+    print(gandalf)
+
+    gandalf.lanzar_hechizo("Bola de hielo", 80)
