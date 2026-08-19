@@ -1,0 +1,21 @@
+class Personaje:
+    def __init__(self, nombre, raza, edad, vida, arma):
+        self.nombre = nombre
+        self.raza = raza
+        self.edad = edad
+        self.vida = vida
+        self.arma = arma
+
+    def atacar(self, objetivo):
+        objetivo.vida -= self.arma.daño
+        print()
+            
+class Arma:
+    def __init__(self, nombre, daño, material):
+        self.nombre = nombre
+        self.daño = daño
+        self.material = material
+
+# La guia no dice que se hace con el metodo describir. Voy a suponer que el punto de esta es hacer un __str__ de nuevo.
+
+    def __describir__(self):

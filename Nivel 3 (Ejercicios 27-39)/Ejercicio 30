@@ -1,0 +1,52 @@
+# En este siguiente ejercicio, la guia no especifica que se espera hacer con cada metodo, asi que supuse la idea es solo tenerlo dentro del codigo de manera correcta.
+# Hice un print en cada uno para que se pueda verificar que el codigo reconoce los metodos y etc.
+
+class Personaje:
+    def __init__(self, nombre, raza):
+        self.nombre = nombre
+        self.raza = raza
+
+# Este __str__ solo hace que el print muestre el nombre y raza. Si no, mostraria la direccion de memoria (<__main__.Hobbit object at 0x0000026440022250> por ejemplo)
+
+    def __str__(self):
+        return f"{self.nombre} ({self.raza})"
+
+class Hobbit(Personaje):
+    def __init__(self, nombre, comidas_al_dia):
+        super().__init__(nombre, raza="Hobbit")
+        self.comidas_al_dia = comidas_al_dia
+        print(f"{self.nombre} come {self.comidas_al_dia} comidas al día.")
+
+    def segundo_desayuno(self):
+        print(f"{self.nombre} está disfrutando de su segundo desayuno.")
+
+class Elfo(Personaje):
+    def __init__(self, nombre, punteria):
+        super().__init__(nombre, raza="Elfo")
+        self.punteria = punteria
+
+    def disparar_flecha(self):
+        print(f"{self.nombre} dispara una flecha con una punteria de {self.punteria}.")
+
+# Para este metodo, ni idea que tendria que ver la resistencia de barba con un golpe de hacha.
+
+class Enano(Personaje):
+    def __init__(self, nombre, resistencia_barba):
+        super().__init__(nombre, raza="Enano")
+        self.resistencia_barba = resistencia_barba
+
+    def golpe_de_hacha(self):
+        print(f"{self.nombre} realiza un golpe de hacha. Por si acaso, su barba tiene una resistencia de {self.resistencia_barba}. Wow! :D")
+
+
+if __name__ == "__main__":
+    frodo = Hobbit("Frodo", comidas_al_dia=4)
+    legolas = Elfo("Legolas", punteria=98)
+    gimli = Enano("Gimli", resistencia_barba=95)
+
+    for personaje in (frodo, legolas, gimli):
+        print(personaje)
+
+    frodo.segundo_desayuno()
+    legolas.disparar_flecha()
+    gimli.golpe_de_hacha()
