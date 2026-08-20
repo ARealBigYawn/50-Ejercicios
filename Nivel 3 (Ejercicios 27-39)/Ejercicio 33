@@ -1,0 +1,51 @@
+class Personaje:
+    def __init__(self, nombre, raza, vida):
+        self.nombre = nombre
+        self.raza = raza
+        self.vida = vida
+
+class Compañia:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.miembros = []
+
+    def agregar_miembro(self, personaje):
+        if len(self.miembros) >= 9:
+            print(f"ERROR. La compañia se encuentra con la cantidad maxima de miembros. (9)")
+            return
+        self.miembros.append(personaje)
+        print(f"{personaje.nombre}, bienvenido a la compañia!")
+
+    def eliminar_miembro(self, nombre):
+        for personaje in self.miembros:
+            if personaje.nombre == nombre:
+                self.miembros.remove(personaje)
+                print(f"{nombre} ha sido removido de la compañia.")
+                return
+            else:
+                print(f"ERROR. No se encontro a {nombre} en la compañia.")
+                return
+
+    def listar_miembros(self):
+        print(f"Los miembros de la compañia son: ")
+        for personaje in self.miembros:
+            print(f"{personaje.nombre}")
+
+    def total_vida(self):
+        return sum(personaje.vida for personaje in self.miembros)
+
+if __name__ == "__main__":
+    frodo = Personaje("Frodo", "Hobbit", 80)
+    sam = Personaje("Sam", "Hobbit", 100)
+    gandalf = Personaje("Gandalf", "Mago", 150)
+
+    compañia = Compañia("La Compañia")
+    compañia.agregar_miembro(frodo)
+    compañia.agregar_miembro(sam)
+    compañia.agregar_miembro(gandalf)
+
+    compañia.listar_miembros()
+    print("Vida total:", compañia.total_vida())
+
+    compañia.eliminar_miembro("Sam")
+    compañia.listar_miembros()
