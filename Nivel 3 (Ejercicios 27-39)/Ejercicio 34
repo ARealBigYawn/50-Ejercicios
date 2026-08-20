@@ -1,0 +1,32 @@
+class AnilloUnico:
+    def __init__(self, portador):
+        self.__portador = portador
+        self.__nivel_corrupcion = 0
+
+    def cambiar_portador(self, nuevo):
+        self.__portador = nuevo
+        self.__nivel_corrupcion += 10
+        if self.__nivel_corrupcion >= 100:
+            print("El portador se ha convertido en Gollum.")
+
+    def ver_estado(self):
+        return self.__nivel_corrupcion
+
+    def nombre_portador(self):
+        return self.__portador
+
+anillo = AnilloUnico("Sauron")
+
+print(f"Portador: {anillo.nombre_portador()}, Corrupción: {anillo.ver_estado()}")
+
+anillo.cambiar_portador("Isildur")
+print(f"Portador: {anillo.nombre_portador()}, Corrupción: {anillo.ver_estado()}")
+
+anillo.cambiar_portador("Gollum")
+print(f"Portador: {anillo.nombre_portador()}, Corrupción: {anillo.ver_estado()}")
+
+anillo.cambiar_portador("Bilbo")
+print(f"Portador: {anillo.nombre_portador()}, Corrupción: {anillo.ver_estado()}")
+
+anillo.cambiar_portador("Frodo")
+print(f"Portador: {anillo.nombre_portador()}, Corrupción: {anillo.ver_estado()}")
